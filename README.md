@@ -49,9 +49,9 @@ certbot
 ```
 ## Access to OS2display
 The installation can be accessed via these URL's
-API: [your.domain.dk]/
-Client: [your.domain.dk]/client
-Admin: [your.domain.dk]/admin (use the user created from the installation)
+- API: [your.domain.dk]/
+- Client: [your.domain.dk]/client
+- Admin: [your.domain.dk]/admin (use the user created from the installation)
 
 ### OS2display / symfony management
 The INSTALL.sh scripts helps with creating a tenant, admin user, templates, screens and feeds 
