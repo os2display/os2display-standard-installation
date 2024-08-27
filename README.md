@@ -49,8 +49,11 @@ certbot
 ```
 
 ### OS2display / symfony management
-The INSTALL.sh scripts helps with creating a tennant, admin user, templates and 
+The INSTALL.sh scripts helps with creating a tenant, admin user, templates, screens and feeds 
 For help on creating more of these type ./INSTALL.sh display
+
+Also look at the install scripts in ./public_html
+
 
 ## LINKS
 Symfony for Apache configuration: https://symfony.com/doc/current/setup/web_server_configuration.html
