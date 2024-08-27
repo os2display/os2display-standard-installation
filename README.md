@@ -32,7 +32,7 @@ Issue the commands below to install OS2display and follow the instructions
 
 DB credentials are saved in /var/www/[your_domain]
 ```bash
-cd /var/www/display
+cd /var/www/os2display-standard-installation
 ./INSTALL.sh your-domain
 ```
 
