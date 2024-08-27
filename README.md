@@ -54,6 +54,9 @@ For help on creating more of these type ./INSTALL.sh display
 
 Also look at the install scripts in ./public_html
 
+## TODO
+1. Install Symfony as non root userGet 
+2. Get the right composer.json file when installing. (no prompt)
 
 ## LINKS
 Symfony for Apache configuration: https://symfony.com/doc/current/setup/web_server_configuration.html
