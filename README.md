@@ -21,7 +21,7 @@ Issue the commands below and the needed server components will be installed
 ```bash
 sudo -s
 rm -rf /var/setup.sh
-wget -P /var https://raw.githubusercontent.com/bellcom/display/main/scripts/setup.sh 
+wget -P /var https://raw.githubusercontent.com/os2display/os2display-standard-installation/main/scripts/setup.sh
 chmod a+x /var/setup.sh
 cd /var
 ./setup.sh
