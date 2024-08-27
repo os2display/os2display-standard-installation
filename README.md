@@ -47,16 +47,22 @@ To install via lets encrypt with a valid domain for your server do (follow instr
 ```bash
 certbot
 ```
+### Access to OS2display
+The installation can be accessed via these URL's
+API: [your.domain.dk]/
+Client: [your.domain.dk]/client
+Admin: [your.domain.dk]/admin (use the user created from the installation)
 
 ### OS2display / symfony management
 The INSTALL.sh scripts helps with creating a tenant, admin user, templates, screens and feeds 
-For help on creating more of these type ./INSTALL.sh display
+For help on creating more of these type ./INSTALL.sh display (Not implemented yet)
 
 Also look at the install scripts in ./public_html
 
 ## TODO
 1. Install Symfony as non root userGet 
 2. Get the right composer.json file when installing. (no prompt)
+3. Display help info in INSTALL.sh
 
 ## LINKS
 Symfony for Apache configuration: https://symfony.com/doc/current/setup/web_server_configuration.html
