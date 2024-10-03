@@ -50,6 +50,7 @@ fi
 # Setting permissions for the template and layout script
 chmod a+x /var/www/display/scripts/install_templates.sh
 chmod a+x /var/www/display/scripts/install_layouts.sh
+chmod a+x /var/www/display/scripts/install_feeds.sh
 
 # Dropping the database if it exists
 mysql=$(mysql -u root -e 'show databases;')
@@ -70,15 +71,6 @@ if [[ $mysql == *"$check_db"* ]]; then
 	fi	
 fi
 
-#check_db_length=${#check_db}
-#mysql_user_name_max=$check_db
-#if [ "$check_db_length" > "16" ]
-#echo $mysql_user_name_max
-#if [ "$mysql_user_name_max" > "16" ]
-#then
-#fi
-
-#echo $mysql_user_name_max
 # Creating DB, docroot and vhost for the site
 /usr/bin/php /var/www/display/scripts/create_site_with_db.php $1
 
@@ -125,7 +117,7 @@ sed -i 's/displayapiservice.local.itkdev.dk/'$1'/g' .env.local
 # Moving install scripts
 cp /var/www/display/scripts/install_templates.sh /var/www/$1/public_html/
 cp /var/www/display/scripts/install_layouts.sh /var/www/$1/public_html/
-
+cp /var/www/display/scripts/install_feeds.sh /var/www/$1/public_html/
 
 #---
 # OS2display client
@@ -156,7 +148,7 @@ tar -xvzf display-admin-client-2.0.2.tar.gz
 chown -R www-data: admin/
 
 # Setup of the admin client configuration
-cd /var/www/$1/public_html/admin
+cd /var/www/$1/public_html
 cp example_config.json config.json
 cp example-access-config.json access-config.json 
 chown -R www-data: config.json
@@ -168,7 +160,6 @@ cp /var/www/display/patch/Media.php /var/www/$1/public_html/src/Entity/Tenant/Me
 # Composer install
 composer require predis/predis
 composer install --optimize-autoloader
-composer install
 
 # To be removed
 #/usr/bin/php -q /var/www/$1/public/bin/console doctrine:query:sql "show tables"
@@ -197,3 +188,17 @@ cd /var/www/$1/public_html
 ./install_templates.sh
 ./install_layouts.sh
 
+# Running Symfony install command for Feeds. This needs a little feedback
+read -p "Installing an RSS feeds - this needs a little input 
+
+* Feed type needed (use the down arrow): App\Feed\RssFeedType
+* Add it to the tenant that was just created (use arrow down)
+* Follow the rest of the instructions for naming
+
+Pres y to continue (y/n)" -n 1 -r
+if [[ $REPLY =~ ^[Nn]$ ]]
+then
+	exit
+else
+	./install_feeds.sh
+fi
