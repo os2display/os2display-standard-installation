@@ -38,7 +38,7 @@ $sysName = fread(STDIN, 80); // Read up to 80 characters or a newline
 
 #Sætter alle faste variable.
 $sitepath = "/var/www/";
-$vhostaddress = "http://tools.bellcom.dk/vhost.txt";
+$vhostaddress = "https://raw.githubusercontent.com/os2display/os2display-standard-installation/refs/heads/main/templates/apache_install_vhost.txt";
 $exec_genpasswd = "pwgen -N1 -s 10";
 $passwd = exec($exec_genpasswd);
 $username = preg_replace('/\./', '_', $sitename);
