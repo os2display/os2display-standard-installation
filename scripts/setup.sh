@@ -3,7 +3,7 @@ apt-get update -y
 apt-get upgrade -y
 apt-get install -y apache2 git
 cd /var/www
-git clone https://github.com/bellcom/display.git
+git clone git@github.com:os2display/os2display-standard-installation.git
 
 sudo apt install ca-certificates apt-transport-https software-properties-common lsb-release -y
 curl -sSL https://packages.sury.org/php/README.txt | sudo bash -x
