@@ -67,7 +67,7 @@ https://os2web.atlassian.net/browse/S2DSPL-45
 3. Removing bindings to vendor github repo
 4. Better installation / fix of RSS feeds - added seperate install.sh for feeds
 5. Fixing apt installation error regarding to PHP
-6. Documenting setup of SSL without certbot - added cert generation script for apache and link for doing it for nginx
+6. Added ssl enabeling to apache and documention on setup of SSL without certbot - added cert generation script for apache and link for doing it for nginx
 
 ## TODO
 1. Install Symfony as non root user 
