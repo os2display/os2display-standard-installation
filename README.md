@@ -2,7 +2,7 @@
 Os2display install profile without docker
 If you are looking for the older (debrecated) docker setup go [here](https://github.com/os2display/os2display-docker-compose)
 
-Se usefull links at the buttom of the readme file. 
+Se usefull links and latest changes at the buttom of the readme file. 
 
 ## How to install OS2display (a valid domain is neede for SSL)
 This installation has been tested for Debian 12 server version and Ubuntu 24.04 server version. 
@@ -59,10 +59,20 @@ For help on creating more of these type ./INSTALL.sh display (Not implemented ye
 
 Also look at the install scripts in ./public_html
 
+## Latest changes
+https://os2web.atlassian.net/browse/S2DSPL-45
+
+1. Get the right composer.json file when installing. (no prompt)
+2. Removing bindings to vendor server
+3. Removing bindings to vendor github repo
+4. Better installation / fix of RSS feeds - added seperate install.sh for feeds
+5. Fixing apt installation error regarding to PHP
+6. Documenting setup of SSL without certbot - added cert generation script for apache and link for doing it for nginx
+
 ## TODO
 1. Install Symfony as non root user 
-2. Get the right composer.json file when installing. (no prompt)
-3. Display help info in INSTALL.sh
+2. Display help info in INSTALL.sh
+3. Descruption on how to update - or make an update script.
 
 ## LINKS
 Symfony for Apache configuration: https://symfony.com/doc/current/setup/web_server_configuration.html
