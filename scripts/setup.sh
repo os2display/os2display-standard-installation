@@ -17,6 +17,8 @@ sudo a2enmod php8.3
 
 sudo apt purge php8.2*
 sudo a2enmod rewrite
+sudo a2enmod ssl
+
 systemctl restart apache2
 chmod u+x /var/www/display/INSTALL.sh
 
