@@ -2,6 +2,10 @@
 apt-get update -y
 apt-get upgrade -y
 apt-get install -y apache2 git
+
+cd /etc/apt/sources.list.d/
+rm php.list
+
 cd /var/www
 git clone https://github.com/os2display/os2display-standard-installation.git display
 
