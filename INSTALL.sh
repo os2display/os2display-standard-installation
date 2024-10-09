@@ -148,7 +148,7 @@ tar -xvzf display-admin-client-2.0.2.tar.gz
 chown -R www-data: admin/
 
 # Setup of the admin client configuration
-cd /var/www/$1/public_html
+cd /var/www/$1/public_html/admin
 cp example_config.json config.json
 cp example-access-config.json access-config.json 
 chown -R www-data: config.json
@@ -158,8 +158,11 @@ chown -R www-data: access-config.json
 cp /var/www/display/patch/Media.php /var/www/$1/public_html/src/Entity/Tenant/Media.php 
 
 # Composer install
+cd /var/www/$1/public_html
 composer require predis/predis
 composer install --optimize-autoloader
+#composer -n --no-plugins require predis/predis
+#composer -n --no-plugins install --optimize-autoloader
 
 # To be removed
 #/usr/bin/php -q /var/www/$1/public/bin/console doctrine:query:sql "show tables"
@@ -193,7 +196,7 @@ read -p "Installing an RSS feeds - this needs a little input
 
 * Feed type needed (use the down arrow): App\Feed\RssFeedType
 * Add it to the tenant that was just created (use arrow down)
-* Follow the rest of the instructions for naming
+* Follow the rest of the instructions for naming (RSS for each is ok)
 
 Pres y to continue (y/n)" -n 1 -r
 if [[ $REPLY =~ ^[Nn]$ ]]
