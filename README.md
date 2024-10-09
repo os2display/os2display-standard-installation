@@ -70,7 +70,7 @@ https://os2web.atlassian.net/browse/S2DSPL-45
 6. Added ssl enabeling to apache and documention on setup of SSL without certbot - added cert generation script for apache and link for doing it for nginx
 
 ## TODO
-1. Install Symfony as non root user 
+1. Install Symfony as non root user - tried to install with plugins disabled but they are needed. 
 2. Display help info in INSTALL.sh
 3. Descruption on how to update - or make an update script.
 
