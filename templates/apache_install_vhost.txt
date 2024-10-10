@@ -7,7 +7,6 @@
    # Uncomment on test sites!!!11!!
    #Alias /robots.txt /var/www/robots.txt
 
-   ServerAdmin domains@bellcom.dk
    DocumentRoot /var/www/[domain]/public_html
    ServerName [domain]
    ServerAlias www.[domain]
