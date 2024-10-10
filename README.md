@@ -77,4 +77,7 @@ https://os2web.atlassian.net/browse/S2DSPL-45
 ## LINKS
 Symfony for Apache configuration: https://symfony.com/doc/current/setup/web_server_configuration.html
 Online page for adding certificates to nginx and apache - for apache please use the included script: https://xy2z.io/posts/2020-pfx-certificates-nginx-apache2/
+
+## Next release to look at:
+https://os2display.github.io/display-docs/CHANGELOG.html#2024-08-14
  
