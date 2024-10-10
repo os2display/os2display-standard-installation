@@ -1,1 +1,1 @@
-* technical description of the OS2display installation package. 
+# technical description of the OS2display installation package. 
