@@ -40,12 +40,17 @@ Lets encrypt needs a valid domain. As does this installation. :-)
 
 Lets encrypt could be blocked by your domain owner.
 
-To install via lets encrypt with a valid domain for your server do (follow instructions): 
+To install via lets encrypt with a valid domain for your server execute "certbot" and follow the instructions: 
 
 
 ```bash
 certbot
 ```
+
+### Installation - step 3 - Using your own SSL certificate for Apache webserver
+- Download your p12 file to the server - or copy the extract_certs.sh to your local computer
+- 
+
 ## Access to OS2display
 The installation can be accessed via these URL's
 - API: [your.domain.dk]/
@@ -74,8 +79,8 @@ https://os2web.atlassian.net/browse/S2DSPL-45
 3. Descruption on how to update - or make an update script.
 
 ## LINKS
-Symfony for Apache configuration: https://symfony.com/doc/current/setup/web_server_configuration.html
-Online page for adding certificates to nginx and apache - for apache please use the included script: https://xy2z.io/posts/2020-pfx-certificates-nginx-apache2/
+- Symfony for Apache configuration: https://symfony.com/doc/current/setup/web_server_configuration.html
+- Online page for manualy adding certificates to nginx and apache https://xy2z.io/posts/2020-pfx-certificates-nginx-apache2/
 
 ## Next release to look at:
 https://os2display.github.io/display-docs/CHANGELOG.html#2024-08-14
