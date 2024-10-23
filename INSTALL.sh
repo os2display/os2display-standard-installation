@@ -84,6 +84,9 @@ sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 200M/g' /etc/php/8.3/ap
 cp /var/www/display/templates/apache2.vhost.conf /etc/apache2/sites-available/$1.conf
 sed -i 's/DOMAIN/'$1'/g' /etc/apache2/sites-available/$1.conf
 
+# Implementing a SSL template in sites-avaiable for using own certificate
+cp /var/www/display/templates/apache2.vhost-ssl.conf /etc/apache2/sites-available/$1-ssl.conf
+sed -i 's/DOMAIN/'$1'/g' /etc/apache2/sites-available/$1-ssl.conf
 # Restarting Apache webserver to load new configuration
 systemctl restart apache2
 
