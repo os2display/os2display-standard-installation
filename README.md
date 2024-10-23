@@ -48,8 +48,19 @@ certbot
 ```
 
 ### Installation - step 3 - Using your own SSL certificate for Apache webserver
-- Download your p12 file to the server - or copy the extract_certs.sh to your local computer
-- 
+- Download your pfx / p12 file to the server in /etc/apache2/ssl (must be created first - se below) - or copy the extract_certs.sh [link](https://github.com/os2display/os2display-standard-installation/raw/refs/heads/main/scripts/extract_certs.sh) to your local computer. The example will continue as if we are on the newly installed server
+- Execute the script
+  
+```bash
+mkdir /etc/apache2/ssl/
+mkdir /etc/apache2/ssl/[your.domain.dk]
+cd /etc/apache2/ssl
+/var/www/display/scripts/extract_certs.sh [your.domain.dk]
+ln -s /etc/apache2/sites-available/[your.domain.dk]-ssl.conf /etc/apache2/sites-enabled/
+apachectl configtest
+apachectl graceful
+```
+Make sure that the webserver is running. If not have a look in /var/log/apache2/error.log
 
 ## Access to OS2display
 The installation can be accessed via these URL's
