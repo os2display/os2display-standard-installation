@@ -3,7 +3,7 @@ Os2display install profile without docker. If you are looking for the older (deb
 
 See usefull links and latest changes at the buttom of the readme file. 
 
-## How to install OS2display (a valid domain is neede for SSL)
+## How to install OS2display (a valid domain is needed for SSL)
 This installation has been tested for Debian 12 server version and Ubuntu 24.04 server version. 
 Both should work on the Desktop version as well. 
 
@@ -55,7 +55,7 @@ certbot
 mkdir /etc/apache2/ssl/
 mkdir /etc/apache2/ssl/[your.domain.dk]
 cd /etc/apache2/ssl
-/var/www/display/scripts/extract_certs.sh [your.domain.dk]
+/var/www/display/scripts/extract_certs.sh [your_certificate_filename]
 ln -s /etc/apache2/sites-available/[your.domain.dk]-ssl.conf /etc/apache2/sites-enabled/
 apachectl configtest
 apachectl graceful
