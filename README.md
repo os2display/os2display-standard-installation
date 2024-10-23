@@ -1,8 +1,7 @@
 # OSdisplay
-Os2display install profile without docker
-If you are looking for the older (debrecated) docker setup go [here](https://github.com/os2display/os2display-docker-compose)
+Os2display install profile without docker. If you are looking for the older (debrecated) docker setup go [here](https://github.com/os2display/os2display-docker-compose)
 
-Se usefull links and latest changes at the buttom of the readme file. 
+See usefull links and latest changes at the buttom of the readme file. 
 
 ## How to install OS2display (a valid domain is neede for SSL)
 This installation has been tested for Debian 12 server version and Ubuntu 24.04 server version. 
@@ -39,7 +38,7 @@ cd /var/www/display
 ### Installation - step 3 - Using Lets encrypt - Certbot for SSL
 Lets encrypt needs a valid domain. As does this installation. :-)
 
-Lets encrypt could be blocked by your domain owner
+Lets encrypt could be blocked by your domain owner.
 
 To install via lets encrypt with a valid domain for your server do (follow instructions): 
 
@@ -54,7 +53,7 @@ The installation can be accessed via these URL's
 - Admin: [your.domain.dk]/admin (use the user created from the installation)
 
 ### OS2display / symfony management
-The INSTALL.sh scripts helps with creating a tenant, admin user, templates, screens and feeds 
+The INSTALL.sh scripts helps with creating a tenant, admin user, templates, screens and feeds. 
 For help on creating more of these type ./INSTALL.sh display (Not implemented yet)
 
 Also look at the install scripts in ./public_html
