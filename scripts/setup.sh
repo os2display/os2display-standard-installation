@@ -1,7 +1,7 @@
 #! /bin/bash
 apt-get update -y
 apt-get upgrade -y
-apt-get install -y git
+apt-get install -y apache2 git
 
 cd /etc/apt/sources.list.d/
 rm php.list
@@ -15,7 +15,7 @@ curl -sSL https://packages.sury.org/php/README.txt | sudo bash -x
 apt-get update -y
 apt-get upgrade -y
 
-apt-get install -y apache2 pwgen libapache2-mod-php vim certbot python3-certbot-apache redis-server redis-tools composer libapache2-mod-php git php8.3 libapache2-mod-php8.3 php8.3-gd php8.3-xml zip unzip php8.3-curl php-xml php8.3-mysql
+apt-get install -y pwgen libapache2-mod-php vim certbot python3-certbot-apache redis-server redis-tools composer libapache2-mod-php git php8.3 libapache2-mod-php8.3 php8.3-gd php8.3-xml zip unzip php8.3-curl php-xml php8.3-mysql
 apt-get install -y mariadb-server
 
 sudo a2enmod php8.3
