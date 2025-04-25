@@ -15,7 +15,7 @@ curl -sSL https://packages.sury.org/php/README.txt | sudo bash -x
 apt-get update -qq -y
 apt-get upgrade -qq -y
 
-apt-get install -qq -y pwgen mariadb-server libapache2-mod-php vim certbot python3-certbot-apache redis-server redis-tools composer libapache2-mod-php git php8.3 libapache2-mod-php8.3 php8.3-gd php8.3-xml zip unzip php8.3-curl php-xml php8.3-mysql
+apt-get install -qq -y pwgen mariadb-server libapache2-mod-php vim certbot python3-certbot-apache redis-server redis-tools composer git php8.3 libapache2-mod-php8.3 php8.3-gd php8.3-xml zip unzip php8.3-curl php8.3-xml php8.3-mysql php8.3-cli
 apt-get install -qq -y mariadb-server
 
 sudo a2enmod php8.3
