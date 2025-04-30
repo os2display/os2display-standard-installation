@@ -12,3 +12,5 @@ php bin/console app:template:load https://raw.githubusercontent.com/os2display/d
 php bin/console app:template:load https://raw.githubusercontent.com/os2display/display-templates/main/build/table-config-main.json
 php bin/console app:template:load https://raw.githubusercontent.com/os2display/display-templates/main/build/travel-config-main.json
 php bin/console app:template:load https://raw.githubusercontent.com/os2display/display-templates/main/build/video-config-main.json
+php bin/console app:template:load https://raw.githubusercontent.com/os2display/display-templates/main/src/vimeo-player/vimeo-player-config.json
+

@@ -55,8 +55,6 @@ chmod a+x /var/www/display/scripts/install_feeds.sh
 # Dropping the database if it exists
 mysql=$(mysql -u root -e 'show databases;')
 check_db=${1//./_}
-echo $check_db
-echo $mysql;
 if [[ $mysql == *"$check_db"* ]]; then
 	read -p "Database exists - Do you want to drop user and database and continue (y/n) ?" -n 1 -r
 	if [[ $REPLY =~ ^[Nn]$ ]]
@@ -128,8 +126,8 @@ cp /var/www/display/scripts/install_feeds.sh /var/www/$1/public_html/
 
 # Cloning the OS2display client into ./public_html/client 
 cd /var/www/$1/public_html
-wget https://github.com/os2display/display-client/releases/download/2.0.3/display-client-2.0.3.tar.gz
-tar -xvzf display-client-2.0.3.tar.gz
+wget -q https://github.com/os2display/display-client/releases/download/2.0.3/display-client-2.0.3.tar.gz
+tar -xzf display-client-2.0.3.tar.gz
 chown -R www-data: client/
 
 # Setup of the client configuration
@@ -146,8 +144,8 @@ echo $1 ' Has been added to config.json'
 
 # Cloning the OS2display admin client into ./public_html/admin
 cd /var/www/$1/public_html
-wget https://github.com/os2display/display-admin-client/releases/download/2.0.2/display-admin-client-2.0.2.tar.gz
-tar -xvzf display-admin-client-2.0.2.tar.gz
+wget -q https://github.com/os2display/display-admin-client/releases/download/2.0.2/display-admin-client-2.0.2.tar.gz
+tar -xzf display-admin-client-2.0.2.tar.gz
 chown -R www-data: admin/
 
 # Setup of the admin client configuration
