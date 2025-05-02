@@ -24,7 +24,7 @@ sudo apt purge php8.2*
 sudo a2enmod rewrite
 sudo a2enmod ssl
 
-update-alternatives --set php /usr/bin/php8.2
+update-alternatives --set php /usr/bin/php8.3
 
 systemctl restart apache2
 chmod u+x /var/www/display/INSTALL.sh
